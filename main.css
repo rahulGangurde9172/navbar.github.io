@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+    left: 0;
+    top: 0;   
+    font-family: sans-serif;
+    font-weight: 700;
+  
+    /* background: #f2e6ff; */
+}
+:root{
+    --main-color:#1fadff;
+    --box-shadow:rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+/* main section */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 1.5rem  1rem 1.5rem ;
+    border-radius:.5rem ;
+    padding: 0 1rem 0 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.navbar .logo{
+    margin-left: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+.navbar .logo p{
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: sans-serif;
+}
+.navbar .logo p span{
+   color: var(--main-color);
+}
+.navbar .nav a{
+    padding: 0 1rem 0 1rem;
+   text-decoration: none;
+}
+
+.main-btn{
+    display: flex;
+}
+
+.main-btn p {
+    /* background: rgb(69, 212, 255); */
+    padding: 5px;
+    margin: .5rem;
+    border-radius: .5rem;
+   
+}
+.main-btn p:hover{
+    background: rgb(69, 212, 255);
+}
+.main-btn p a{
+    text-decoration: none;
+}
+#menu-btn{
+    display: none;
+}
+@media (max-width:420px) {
+    .navbar .logo {
+        padding: 0;
+        margin: 0px;
+        position: absolute;
+        left: 4rem;
+        top: 10px;
+    }
+    .navbar .nav {
+        position: absolute;
+        top: 3rem;
+        left: 1rem;
+        height: 0vh;
+        padding: 11px;
+        width: 90%;
+        /* align-items: center; */
+        display: flex;
+        flex-direction: column;
+        /* border: 2px solid red; */
+        /* box-shadow: var(--box-shadow); */
+      /* display: none; */
+
+      transition: .4s;
+    }
+    .nav.active{
+        /* display: flex;
+        flex-direction: column; */
+        height: 14vh;
+        box-shadow: var(--box-shadow);
+    }
+    .nav a{
+        padding: 0 5px 0 5px;
+    }
+    .nav a:hover{
+        color: var(--main-color);
+    }
+    
+.main-btn p {
+    /* background: rgb(69, 212, 255); */
+    padding: 3px;
+    margin: .5rem 0;
+   }
+   #menu-btn{
+       display: inline-block;
+   }
+}
